@@ -48,15 +48,23 @@ public class GenerateResource extends Provider{
 
     @Override
     public Response getAll() {
-        AlcoholDTO cdto1 = new AlcoholDTO("Tuborg classic","øl",25,"4,7% dåse");
-        AlcoholDTO cdto2 = new AlcoholDTO("Realzin Zinfandel Salento","rødvin",70,"13% 75 CL.");
-        AlcoholDTO cdto3 = new AlcoholDTO("Carlsberg Pilsner","øs",30,"4,6% dåse");
-        AlcoholDTO cdto4 = new AlcoholDTO("Breezer Lemon Lite","cider",40,"4% flaske");
+        AlcoholDTO alcoholdto1 = new AlcoholDTO("Tuborg classic","beer",2,"4,7% can");
+        AlcoholDTO alcoholdto2 = new AlcoholDTO("Realzin Zinfandel Salento","redwine",20,"13% 75 CL.");
+        AlcoholDTO alcoholdto3 = new AlcoholDTO("Carlsberg Pilsner","beer",2,"4,6% can");
+        AlcoholDTO alcoholdto4 = new AlcoholDTO("Breezer Lemon Lite","cider",4,"4% bottle");
+        AlcoholDTO alcoholdto5 = new AlcoholDTO("2020 Pinot Grigio Veneto Castel del Lago","whitewine",20,"13% 75 CL.");
+        AlcoholDTO alcoholdto6 = new AlcoholDTO("2018 Borgo Al Passo Chianti Nuova Generazione","redwine",20,"13% 75 CL.");
+        AlcoholDTO alcoholdto7 = new AlcoholDTO("2018 Château La Tonnelle Cru Bourgeois Haut-Médoc","redwine",20,"13% 75 CL.");
+        AlcoholDTO alcoholdto8 = new AlcoholDTO("2016 Château La Tonnelle Cru Bourgeois Haut-Médoc","redwine",20,"13% 75 CL.");
         AlcoholFacade facade=AlcoholFacade.getCourseFacade(EMF);
-        facade.createAlcohol(cdto1);
-        facade.createAlcohol(cdto2);
-        facade.createAlcohol(cdto3);
-        facade.createAlcohol(cdto4);
+        facade.createAlcohol(alcoholdto1);
+        facade.createAlcohol(alcoholdto2);
+        facade.createAlcohol(alcoholdto3);
+        facade.createAlcohol(alcoholdto4);
+        facade.createAlcohol(alcoholdto5);
+        facade.createAlcohol(alcoholdto6);
+        facade.createAlcohol(alcoholdto7);
+        facade.createAlcohol(alcoholdto8);
         return Response.ok("Menu generated").build();
     }
 
